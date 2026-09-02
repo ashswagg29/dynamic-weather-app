@@ -12,7 +12,7 @@ API_KEY = "YOUR_OPENWEATHERMAP_API_KEY"
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather?"
 ICON_URL = "https://openweathermap.org/img/wn/{}@2x.png"
 
-# ─── THEMES BY WEATHER CONDITIONS ─────────────────────────────────────────────
+#  THEMES BY WEATHER CONDITIONS 
 TEMALAR = {
     "gunesli": {
         "ad": "Sunny",
@@ -462,7 +462,7 @@ class HavaDurumuUygulamasi:
         self.partikul_sistemi = PartikulSistemi(self.bg_canvas)
         self.partikul_sistemi.tema_guncelle("gece", TEMALAR["gece"])
 
-        # ── Left Panel ──────────────────────────────────────────────────────────
+        #  Left Panel 
         self.panel_sol = tk.Frame(
             self.root, bg=self.mevcut_tema["panel_bg"],
             width=360, height=720
@@ -594,7 +594,7 @@ class HavaDurumuUygulamasi:
         )
         self.btn_tam_ekran.pack(side="right", padx=(0, 3))
 
-        # ── Right Panel ──────────────────────────────────────────────────────────
+        #  Right Panel 
         self.panel_sag = tk.Frame(self.root, highlightthickness=0)
         self.panel_sag.place(x=360, y=0, width=1040, height=720)
         self.panel_sag.configure(bg=self.mevcut_tema["tablo_bg2"])
